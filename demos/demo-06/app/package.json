@@ -1,0 +1,14 @@
+{
+  "name": "app-shell",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "http-server ./public --port 1234"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

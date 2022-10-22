@@ -1,0 +1,42 @@
+{
+  "name": "blue",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "devDependencies": {
+    "@smapiot/tractor-piral-demo": "^1.0.0",
+    "@types/node": "latest",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router": "^5.0.0",
+    "@types/react-router-dom": "^5.0.0",
+    "piral-cli": "0.14.27",
+    "piral-cli-esbuild": "0.14.27",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "typescript": "latest"
+  },
+  "peerDependencies": {
+    "@dbeining/react-atom": "*",
+    "@smapiot/tractor-piral-demo": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "*",
+    "react-router-dom": "*"
+  },
+  "scripts": {
+    "start": "pilet debug",
+    "build": "pilet build",
+    "upgrade": "pilet upgrade"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "piral": {
+    "comment": "Keep this section to allow running `piral upgrade`.",
+    "name": "@smapiot/tractor-piral-demo"
+  }
+}

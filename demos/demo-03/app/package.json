@@ -1,0 +1,23 @@
+{
+  "name": "app-shell",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack serve --port 1234",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "single-spa": "^5.9.4"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  }
+}

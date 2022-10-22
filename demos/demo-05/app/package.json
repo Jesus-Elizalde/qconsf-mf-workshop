@@ -1,0 +1,35 @@
+{
+  "name": "@smapiot/tractor-piral-demo",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "dependencies": {
+    "path-to-regexp": "^6.2.1",
+    "piral-core": "0.14.27",
+    "piral-containers": "0.14.27",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0"
+  },
+  "scripts": {
+    "start": "piral debug",
+    "build": "piral build"
+  },
+  "app": "./src/index.html",
+  "pilets": {
+    "externals": [],
+    "devDependencies": {},
+    "scripts": {}
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router": "^5.0.0",
+    "@types/react-router-dom": "^5.0.0",
+    "piral-cli": "0.14.27",
+    "piral-cli-esbuild": "0.14.27",
+    "typescript": "latest"
+  }
+}
