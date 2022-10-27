@@ -1,12 +1,11 @@
+const { ModuleFederationPlugin } = require("webpack").container;
+
 module.exports = {
-  entry: {
-    "purple": ["systemjs-webpack-interop/auto-public-path", "./src/index.js"],
-  },
+  entry: {},
   output: {
-    libraryTarget: "system",
     filename: "[name].js",
     path: __dirname + "/dist",
-    publicPath: "",
+    publicPath: "auto",
   },
   mode: "development",
   devtool: "source-map",
@@ -38,5 +37,12 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "purple",
+      filename: "index.js",
+      exposes: {},
+      remotes: {},
+    }),
+  ],
 };

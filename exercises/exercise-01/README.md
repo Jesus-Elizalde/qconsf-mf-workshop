@@ -18,14 +18,63 @@ Not sure how to do that? Then let's follow the detailed instructions.
 
 ## Detailed Instructions
 
-1. Open the file `purple/src/product-reviews.js`
-2. Extend the `class ProductReviews extends HTMLElement {}` to look like
+1. Open the file `purple/src/product-reviews.js` and modify its content to look like
 
    ```js
+   const link = document.head.appendChild(document.createElement('link'));
+   link.href = getUrl("/reviews.css");
+   link.rel = "stylesheet";
+
+   function getUrl(path) {
+     return new URL(path, import.meta.url).href;
+   }
+
+   const allReviews = {
+     porsche: ["So great", "Wonderful", "Works for me..."],
+     fendt: ["Not my cup of tea..."],
+     eicher: ["Just the best", "Give it a try!"],
+   };
+
    class ProductReviews extends HTMLElement {
-    connectedCallback() {
-      this.innerHTML = ``;
-    }
+     constructor() {
+        super();
+        const sku = this.getAttribute("sku") || "porsche";
+        this.render(sku);
+     }
+
+     static get observedAttributes() {
+        return ["sku"];
+     }
+
+     render(sku) {
+        const reviews = allReviews[sku] || allReviews.porsche;
+        this.innerHTML = `
+           <h3>Reviews</h3>
+             ${reviews.map((review) => `<p>${review}</p>`).join("\n")}
+           </div>`;
+     }
+
+     attributeChangedCallback(name, oldValue, newValue) {
+        if (name === "sku" && oldValue !== newValue) {
+           this.render(newValue);
+        }
+     }
+   }
+
+   customElements.define("product-reviews", ProductReviews);
+   ```
+
+2. Create a new file `reviews.css` in the `purple/src` directory. Add some styling to make your solution nicely to look at.
+
+   ```css
+   .purple-reviews {
+      display: block;
+      outline: 3px dashed purple;
+      width: 100%;
+   }
+
+   #reviews {
+      grid-area: reviews;
    }
    ```
 
@@ -43,21 +92,7 @@ Not sure how to do that? Then let's follow the detailed instructions.
 
    Place the custom element where you want; ideally right *after* the `</buy-button>`.
 
-5. Add some styling to make your solution nicely to look at.
-
-   ```css
-   .purple-reviews {
-      display: block;
-      outline: 3px dashed purple;
-      width: 100%;
-   }
-
-   #reviews {
-      grid-area: reviews;
-   }
-   ```
-
-6. Integrate the styling also in the grid area; modify `.../demos/demo-02/app/public/style.css` to have
+5. Integrate the styling also in the grid area; modify `.../demos/demo-02/app/public/style.css` to have
 
    ```css
    @media only screen and (max-width: 999px) {
@@ -89,7 +124,7 @@ Not sure how to do that? Then let's follow the detailed instructions.
 
    instead of the previous grid declarations.
 
-7. Copy "purple" into the `../demos/demo-02` directory. Modify the run script of `../demos/demo-02` (e.g., `run-all.sh`) to also include "purple", e.g.,
+6. Copy "purple" into the `../demos/demo-02` directory. Modify the run script of `../demos/demo-02` (e.g., `run-all.sh`) to also include "purple", e.g.,
 
    ```sh
    MFs=('app' 'blue' 'green' 'red', 'purple')
