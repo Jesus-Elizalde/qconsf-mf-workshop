@@ -177,17 +177,17 @@ Not sure how to do that? Then let's follow the detailed instructions.
 
 10. Copy "purple" into the `../demos/demo-03` directory. Modify the run script of `../demos/demo-03` (e.g., `run-all.sh`) to also include "purple", e.g.,
 
-   ```sh
-   MFs=('app' 'blue' 'green' 'red', 'purple')
+    ```sh
+    MFs=('app' 'blue' 'green' 'red', 'purple')
 
-   for MF in "${MFs[@]}"
-   do
+    for MF in "${MFs[@]}"
+    do
       cd $MF
       npm install
       cd ..
-   done
+    done
 
-   npx concurrently "npm --prefix app run start" "npm --prefix blue run start" "npm --prefix red run start" "npm --prefix green run start"  "npm --prefix purple run start"
-   ```
+    npx concurrently "npm --prefix app run start" "npm --prefix blue run start" "npm --prefix red run start" "npm --prefix green run start"  "npm --prefix purple run start"
+    ```
 
-   Alternatively, start purple in a new shell (`npm i && npm start`) and leave everything as-is.
+    Alternatively, start purple in a new shell (`npm i && npm start`) and leave everything as-is.
