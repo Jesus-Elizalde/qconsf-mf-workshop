@@ -70,12 +70,18 @@ Not sure how to do that? Then let's follow the detailed instructions.
    }
    ```
 
-3. Modify the `package.json` in `purple` to add the following entries in the `devDependencies`:
+3. Modify the `package.json` in `purple` to add the following entries to `dependencies`:
 
-     ```json
-     "react": "^18",
-     "react-dom": "^18",
-     ```
+   ```json
+   "react": "^18",
+   "react-dom": "^18"
+   ```
+
+   Also add the following to the `devDependencies`:
+
+   ```json
+   "@babel/preset-react": "^7.13.13",
+   ```
 
 4. In the `webpack.config.js` of `purple` modify the `exposes` section of the `ModuleFederationPlugin` to be:
 
@@ -83,6 +89,27 @@ Not sure how to do that? Then let's follow the detailed instructions.
    exposes: {
      "./productReviews": "./src/product-reviews.jsx",
    },
+   ```
+
+   Also to enable the JSX transformation you should add
+
+   ```js
+   options: {
+      presets: ["@babel/preset-react"],
+   },
+   ```
+
+   to the `babel-loader`, i.e., change it to:
+
+   ```js
+   {
+     test: /\.jsx?$/,
+     loader: "babel-loader",
+     exclude: /node_modules/,
+     options: {
+      presets: ["@babel/preset-react"],
+     },
+   }
    ```
 
 5. Integrate the micro frontend by modifying the *webpack.config.js* file in `../demos/demo-04/red`. The `remotes` section has to be:

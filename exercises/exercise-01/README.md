@@ -87,16 +87,22 @@ Not sure how to do that? Then let's follow the detailed instructions.
 4. Integrate the micro frontend by modifying the files in `../demos/demo-02/`. Use the custom element in `red/src/product-page.js`:
 
    ```html
-   <product-reviews sku="${sku}"></product-reviews>
+   <product-reviews sku="${sku}" id="reviews" class="purple-reviews"></product-reviews>
    ```
 
    Place the custom element where you want; ideally right *after* the `</buy-button>`.
+
+   In the `attributeChangedCallback` method also place:
+
+   ```js
+   this.querySelector("#reviews").setAttribute("sku", newValue);
+   ```
 
 5. Integrate the styling also in the grid area; modify `.../demos/demo-02/app/public/style.css` to have
 
    ```css
    @media only screen and (max-width: 999px) {
-      body > div {
+      body > product-page {
          grid-template-areas:
             "store basket"
             "image name"
@@ -109,7 +115,7 @@ Not sure how to do that? Then let's follow the detailed instructions.
       }
 
       @media only screen and (min-width: 1000px) {
-      body > div {
+      body > product-page {
          grid-template-areas:
             "store basket  reco"
             "image name    reco"
