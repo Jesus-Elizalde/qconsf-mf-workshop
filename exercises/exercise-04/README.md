@@ -1,4 +1,4 @@
-# Exercise 5
+# Exercise 4
 
 Create a React web application to be bundled by Webpack. Share some dependencies such `react` and `react-dom` via Module Federation.
 
@@ -16,3 +16,4 @@ Questions:
 Hint:
 
 * Use the "app" directory as a starting point.
+* To explicitly start the consent dialog use `npx http-server consent --cors` in the current directory

@@ -15,4 +15,3 @@ Composing the micro frontends on the client using web components. The individual
 ## Area of Use
 
 * An easy way to integrate micro frontends to a non-MF website
-

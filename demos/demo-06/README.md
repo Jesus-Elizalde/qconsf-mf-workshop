@@ -16,5 +16,4 @@ For enhanced support check out [SystemJS](https://github.com/systemjs/systemjs).
 
 ## Area of Use
 
-* In my opinion not production ready yet - for a production use case see [demo 4](../demo-04/README.md)
-
+* In my opinion not production ready yet - for a production use case see [demo 3](../demo-03/README.md)

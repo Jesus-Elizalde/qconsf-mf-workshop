@@ -1,6 +1,6 @@
-# Exercise 2
+# Exercise 3
 
-Write another MF for the webshop using single-spa. The MF should show reviews related to the currently selected product.
+Write another MF for the webshop using Webpack Module Federation. The MF should show reviews related to the currently selected product.
 
 Questions:
 
@@ -16,4 +16,4 @@ Hints:
 * Use the `purple` directory as a starting point to develop (it already contains a *package.json* and a script file).
 * Extend the `src/product-reviews.js` to have the desired functionality.
 * Run the new MF by calling `npm start` in the `purple` directory (don't forget to `npm install` first).
-* Run the original demo from the `demos/demo-03` folder via `run-all.sh`.
+* Run the original demo from the `demos/demo-04` folder via `run-all.sh`.

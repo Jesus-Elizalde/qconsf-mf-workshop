@@ -15,42 +15,44 @@ Some demos / examples / solutions have a *run-all.sh* file. This works in WSL, L
 
 ## Agenda
 
-9:00 - 10:30
+### 9:00 - 10:30
 
-* Web Approach and Server-Side Composition (*Demo 1*)
+* Web Approach
+* Server-Side Composition (*Demo 1*)
 * Client-Side Composition
 * Web Components for composing Micro Frontends (*Demo 2*)
 * **Exercise 1** (using Web Components for Micro Frontends)
+* UX scaling
+* Application shell
+### 10:30 - 10:45
+
+* *Coffee break*
+
+### 10:45 - 12:00:
+
 * SPA Composition
-
-10:30 - 10:45
-
-* Coffee break
-
-10:45 - 12:00:
-
 * Introduction to single-spa (*Demo 3*)
 * **Exercise 2** (importmaps with SystemJS in single-spa)
 * Introduction to Module Federation (*Demo 4*)
 * Alternative approaches
 * Siteless UIs (*Demo 5*)
 
-12:00 - 12:50
+### 12:00 - 12:50
 
-* Lunch
+* *Lunch*
 
-12:50 - 14:30
+### 12:50 - 14:30
 
 * **Exercise 3** (Module Federation remotes to enable micro frontends)
 * Dependency Sharing
 * Centralized Sharing (*Demo 6*)
 * Distributed Sharing (*Demo 7*)
 
-14:30 - 14:45
+### 14:30 - 14:45
 
-* Coffee break
+* *Coffee break*
 
-14:45 - 16:00
+### 14:45 - 16:00
 
 * **Exercise 4** (Module Federation for dependency sharing)
 * Scalability Concerns
@@ -58,6 +60,8 @@ Some demos / examples / solutions have a *run-all.sh* file. This works in WSL, L
 * Recap & Feedback
 
 ## Further Infos
+
+(none yet)
 
 ## More Samples
 

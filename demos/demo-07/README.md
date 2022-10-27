@@ -15,4 +15,3 @@ This demo shows how dependencies may be shared in a distributed way. Note that t
 ## Area of Use
 
 * Good for progressive enhancement and to do server-side composition with shared modules
-
