@@ -4,7 +4,7 @@
 
 Repository for the workshop regarding Micro Frontends at QCon San Francisco.
 
-Structure:
+## Repository Structure
 
 * **demos**: Contains all the demos referenced in the theory parts.
 * **exercises**: Contains information and boilerplate code to be used for doing the exercises.
@@ -15,7 +15,7 @@ Make sure to run `npm i` in each folder containing a *package.json*.
 
 Some demos / examples / solutions have a *run-all.sh* file. This works in WSL, Linux, and MacOS. Running the script via `./run-all.sh` will actually install and run everything necessary for the respective demo / example / solution. For PowerShell users (Windows) you'll also a find a `./run-all.ps1` in the same directory. When using those scripts there is no need to run `npm i` explicitly.
 
-## Agenda
+## Workshop Agenda
 
 ### 9:00 - 10:30
 
@@ -26,11 +26,12 @@ Some demos / examples / solutions have a *run-all.sh* file. This works in WSL, L
 * **Exercise 1** (using Web Components for Micro Frontends)
 * UX scaling
 * Application shell
+
 ### 10:30 - 10:45
 
 * *Coffee break*
 
-### 10:45 - 12:00:
+### 10:45 - 12:00
 
 * SPA Composition
 * Introduction to single-spa (*Demo 3*)
@@ -63,6 +64,7 @@ Some demos / examples / solutions have a *run-all.sh* file. This works in WSL, L
 
 ## Further Infos
 
+* [Workshop Description](https://qconsf.com/workshop/oct2022/microfrontend-architecture-sold-out)
 * [Homepage of the "Art of Micro Frontends"](https://microfrontends.art/)
 
 ## More Samples
